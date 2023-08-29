@@ -871,6 +871,9 @@ spec:
                     description: Image is a container image with javaagent auto-instrumentation
                       JAR.
                     type: string
+                  command:
+                    description: Command is a command to run in the container.
+                    type: string
                   resources:
                     description: Resources describes the compute resource requirements.
                     properties:
@@ -1570,7 +1573,7 @@ spec:
     served: true
     storage: true
     subresources:
-      status: {}
+      status: { }
 status:
   acceptedNames:
     kind: ""

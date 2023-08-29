@@ -119,6 +119,10 @@ type Java struct {
 	// +optional
 	Image string `json:"image,omitempty"`
 
+	// Command defines the command to copy the auto-instrumentation JAR.
+	// +optional
+	Command []string `json:"command,omitempty"`
+
 	// Env defines java specific env vars. There are four layers for env vars' definitions and
 	// the precedence order is: `original container env vars` > `language specific env vars` > `common env vars` > `instrument spec configs' vars`.
 	// If the former var had been defined, then the other vars would be ignored.

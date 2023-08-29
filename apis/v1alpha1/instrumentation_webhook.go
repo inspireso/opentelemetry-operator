@@ -77,6 +77,10 @@ func (r *Instrumentation) Default() {
 			r.Spec.Java.Image = val
 		}
 	}
+	if len(r.Spec.Java.Command) == 0 {
+		r.Spec.Java.Command = []string{"cp", "/javaagent.jar", "/otel-auto-instrumentation/javaagent.jar"}
+	}
+
 	if r.Spec.Java.Resources.Limits == nil {
 		r.Spec.Java.Resources.Limits = corev1.ResourceList{
 			corev1.ResourceCPU:    resource.MustParse("500m"),
