@@ -1819,6 +1819,13 @@ Java defines configuration for java auto-instrumentation.
         </tr>
     </thead>
     <tbody><tr>
+        <td><b>command</b></td>
+        <td>[]string</td>
+        <td>
+          Command defines the command to copy the auto-instrumentation JAR.<br/>
+        </td>
+        <td>false</td>
+      </tr><tr>
         <td><b><a href="#instrumentationspecjavaenvindex">env</a></b></td>
         <td>[]object</td>
         <td>

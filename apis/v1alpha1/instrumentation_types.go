@@ -120,6 +120,10 @@ type Java struct {
 	// +optional
 	Image string `json:"image,omitempty"`
 
+	// Command defines the command to copy the auto-instrumentation JAR.
+	// +optional
+	Command []string `json:"command,omitempty"`
+
 	// VolumeSizeLimit defines size limit for volume used for auto-instrumentation.
 	// The default size is 150Mi.
 	VolumeSizeLimit *resource.Quantity `json:"volumeLimitSize,omitempty"`

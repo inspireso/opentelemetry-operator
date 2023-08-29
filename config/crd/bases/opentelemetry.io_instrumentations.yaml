@@ -782,6 +782,12 @@ spec:
               java:
                 description: Java defines configuration for java auto-instrumentation.
                 properties:
+                  command:
+                    description: Command defines the command to copy the auto-instrumentation
+                      JAR.
+                    items:
+                      type: string
+                    type: array
                   env:
                     description: Env defines java specific env vars.
                     items:
